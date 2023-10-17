@@ -3,6 +3,7 @@
     "homepage": "https://rekalogika.dev/print",
     "license": "MIT",
     "type": "library",
+    "description": "Monorepo for rekalogika/print, rekalogika/print-contracts, and rekalogika/gotenberg-pdf-bundle packages",
     "authors": [
         {
             "name": "Priyadi Iman Nurcahyo",
