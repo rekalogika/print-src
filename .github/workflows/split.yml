@@ -1,0 +1,66 @@
+name: 'Packages Split'
+
+on:
+    push:
+        branches:
+            - main
+        tags:
+            - '*'
+    workflow_dispatch:
+
+env:
+    GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+jobs:
+    packages_split:
+        runs-on: ubuntu-latest
+
+        strategy:
+            fail-fast: false
+            matrix:
+                # define package to repository map
+                package:
+                    -
+                        local_path: 'print-contracts'
+                        split_repository: 'print-contracts'
+                    -
+                        local_path: 'print'
+                        split_repository: 'print'
+                    -
+                        local_path: 'gotenberg-pdf-bundle'
+                        split_repository: 'gotenberg-pdf-bundle'
+
+        steps:
+            -   uses: actions/checkout@v2
+
+            # no tag
+            -
+                if: "!startsWith(github.ref, 'refs/tags/')"
+                uses: "danharrin/monorepo-split-github-action@v2.3.0"
+                with:
+                    package_directory: 'packages/${{ matrix.package.local_path }}'
+
+                    repository_organization: 'rekalogika'
+                    repository_name: '${{ matrix.package.split_repository }}'
+
+                    repository_host: github.com
+
+                    user_name: "Priyadi Iman Nurcahyo"
+                    user_email: "1102197+priyadi@users.noreply.github.com"
+
+            # with tag
+            -
+                if: "startsWith(github.ref, 'refs/tags/')"
+                uses: "danharrin/monorepo-split-github-action@v2.3.0"
+                with:
+                    tag: ${GITHUB_REF#refs/tags/}
+
+                    package_directory: 'packages/${{ matrix.package.local_path }}'
+
+                    repository_organization: 'rekalogika'
+                    repository_name: '${{ matrix.package.split_repository }}'
+
+                    repository_host: github.com
+
+                    user_name: "Priyadi Iman Nurcahyo"
+                    user_email: "1102197+priyadi@users.noreply.github.com"

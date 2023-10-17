@@ -1,0 +1,29 @@
+{
+    "name": "rekalogika/print",
+    "description": "Implementation for rekalogika/print-contracts. Includes Paper and PageLayout.",
+    "homepage": "https://rekalogika.dev/",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Priyadi Iman Nurcahyo",
+            "email": "priyadi@rekalogika.com"
+        }
+    ],
+    "keywords": [
+        "print",
+        "paper",
+        "margin",
+        "layout"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rekalogika\\Print\\": "src/"
+        }
+    },
+    "require": {
+    },
+    "require-dev": {
+        "nyholm/psr7": "^1.8"
+    }
+}

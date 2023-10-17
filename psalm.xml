@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<psalm
+        errorLevel="1"
+        resolveFromConfigFile="true"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://getpsalm.org/schema/config"
+        xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+        findUnusedBaselineEntry="true"
+        findUnusedCode="false">
+
+    <projectFiles>
+        <directory name="packages" />
+        <directory name="tests" />
+        <ignoreFiles>
+            <directory name="vendor" />
+        </ignoreFiles>
+    </projectFiles>
+
+    <issueHandlers>
+        <UndefinedMethod>
+            <errorLevel type="suppress">
+                <file name="packages/gotenberg-pdf-bundle/src/DependencyInjection/Configuration.php" />
+            </errorLevel>
+        </UndefinedMethod>
+        <MixedMethodCall>
+            <errorLevel type="suppress">
+                <file name="packages/gotenberg-pdf-bundle/src/DependencyInjection/Configuration.php" />
+            </errorLevel>
+        </MixedMethodCall>
+        <UndefinedAttributeClass>
+            <errorLevel type="suppress">
+                <referencedClass name="Override"/>
+            </errorLevel>
+        </UndefinedAttributeClass>
+    </issueHandlers>
+
+    <plugins>
+    </plugins>
+</psalm>

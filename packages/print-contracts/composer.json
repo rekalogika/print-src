@@ -1,0 +1,28 @@
+{
+    "name": "rekalogika/print-contracts",
+    "description": "Abstractions for conversion to PDF and printing in general.",
+    "homepage": "https://rekalogika.dev/",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Priyadi Iman Nurcahyo",
+            "email": "priyadi@rekalogika.com"
+        }
+    ],
+    "keywords": [
+        "pdf",
+        "print",
+        "paper",
+        "margin",
+        "layout"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rekalogika\\Contracts\\Print\\": "src/"
+        }
+    },
+    "require": {
+        "psr/http-message": "^2.0"
+    }
+}
