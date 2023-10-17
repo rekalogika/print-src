@@ -1,7 +1,10 @@
 # rekalogika/print-src
 
-Monorepo for `rekalogika/print`, `rekalogika/print-contracts`, and
-`rekalogika/gotenberg-pdf-bundle` packages.
+Monorepo for
+[`rekalogika/gotenberg-pdf-bundle`](https://github.com/rekalogika/gotenberg-pdf-bundle)
+and supporting packages, including
+[`rekalogika/print`](https://github.com/rekalogika/print) and
+[`rekalogika/print-contracts`](https://github.com/rekalogika/print-contracts).
 
 ## Documentation
 
