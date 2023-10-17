@@ -21,8 +21,6 @@
             "Rekalogika\\Print\\": "src/"
         }
     },
-    "require": {
-    },
     "require-dev": {
         "nyholm/psr7": "^1.8"
     }
