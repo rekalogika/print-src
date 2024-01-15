@@ -40,9 +40,9 @@
         "vimeo/psalm": "^5.15"
     },
     "replace": {
-        "rekalogika/gotenberg-pdf-bundle": "1.0.3",
-        "rekalogika/print": "1.0.3",
-        "rekalogika/print-contracts": "1.0.3"
+        "rekalogika/gotenberg-pdf-bundle": "1.1.0",
+        "rekalogika/print": "1.1.0",
+        "rekalogika/print-contracts": "1.1.0"
     },
     "config": {
         "allow-plugins": {
