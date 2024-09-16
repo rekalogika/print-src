@@ -23,7 +23,7 @@ class PageLayoutTest extends TestCase
     {
         $pageLayout = PageLayout::inMm(
             PageOrientation::Portrait,
-            10
+            10,
         );
 
         $this->assertEquals(0.01, $pageLayout->getTopMargin());
@@ -37,7 +37,7 @@ class PageLayoutTest extends TestCase
         $pageLayout = PageLayout::inMm(
             PageOrientation::Portrait,
             10,
-            20
+            20,
         );
 
         $this->assertEquals(0.01, $pageLayout->getTopMargin());
@@ -52,7 +52,7 @@ class PageLayoutTest extends TestCase
             PageOrientation::Portrait,
             10,
             20,
-            30
+            30,
         );
 
         $this->assertEquals(0.01, $pageLayout->getTopMargin());
@@ -68,7 +68,7 @@ class PageLayoutTest extends TestCase
             10,
             20,
             30,
-            40
+            40,
         );
 
         $this->assertEquals(0.01, $pageLayout->getTopMargin());
