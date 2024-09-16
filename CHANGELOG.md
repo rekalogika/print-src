@@ -5,6 +5,7 @@
 * test: update phpstan and psalm
 * chore: update coding style
 * feat: support Symfony 7 & PHP 8.4
+* build: rectorization
 
 ## 1.1.0
 

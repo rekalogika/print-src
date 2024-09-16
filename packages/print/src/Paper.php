@@ -204,15 +204,17 @@ class Paper implements PaperInterface
     }
 
     private function __construct(
-        private float $width,
-        private float $height,
+        private readonly float $width,
+        private readonly float $height,
     ) {}
 
+    #[\Override]
     public function getWidth(): float
     {
         return $this->width;
     }
 
+    #[\Override]
     public function getHeight(): float
     {
         return $this->height;

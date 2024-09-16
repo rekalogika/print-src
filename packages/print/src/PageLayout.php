@@ -50,6 +50,7 @@ class PageLayout implements PageLayoutInterface
                 $pageOrientation,
             );
         }
+
         return new self(
             $a / 1000,
             $b / 1000,
@@ -77,33 +78,38 @@ class PageLayout implements PageLayoutInterface
     }
 
     private function __construct(
-        private float $topMargin,
-        private float $rightMargin,
-        private float $bottomMargin,
-        private float $leftMargin,
-        private PageOrientation $pageOrientation,
+        private readonly float $topMargin,
+        private readonly float $rightMargin,
+        private readonly float $bottomMargin,
+        private readonly float $leftMargin,
+        private readonly PageOrientation $pageOrientation,
     ) {}
 
+    #[\Override]
     public function getTopMargin(): float
     {
         return $this->topMargin;
     }
 
+    #[\Override]
     public function getRightMargin(): float
     {
         return $this->rightMargin;
     }
 
+    #[\Override]
     public function getBottomMargin(): float
     {
         return $this->bottomMargin;
     }
 
+    #[\Override]
     public function getLeftMargin(): float
     {
         return $this->leftMargin;
     }
 
+    #[\Override]
     public function getPageOrientation(): PageOrientation
     {
         return $this->pageOrientation;
