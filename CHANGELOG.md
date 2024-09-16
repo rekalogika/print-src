@@ -3,10 +3,8 @@
 ## 1.2.0
 
 * test: update phpstan and psalm
-
-## 1.2.0
-
 * chore: update coding style
+* feat: support Symfony 7 & PHP 8.4
 
 ## 1.1.0
 
