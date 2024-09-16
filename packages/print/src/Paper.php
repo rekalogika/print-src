@@ -206,8 +206,7 @@ class Paper implements PaperInterface
     private function __construct(
         private float $width,
         private float $height,
-    ) {
-    }
+    ) {}
 
     public function getWidth(): float
     {

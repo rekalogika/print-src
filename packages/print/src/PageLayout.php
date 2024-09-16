@@ -31,7 +31,7 @@ class PageLayout implements PageLayoutInterface
                 $a / 1000,
                 $a / 1000,
                 $a / 1000,
-                $pageOrientation
+                $pageOrientation,
             );
         } elseif ($c === null) {
             return new self(
@@ -39,7 +39,7 @@ class PageLayout implements PageLayoutInterface
                 $b / 1000,
                 $a / 1000,
                 $b / 1000,
-                $pageOrientation
+                $pageOrientation,
             );
         } elseif ($d === null) {
             return new self(
@@ -47,7 +47,7 @@ class PageLayout implements PageLayoutInterface
                 $b / 1000,
                 $c / 1000,
                 $b / 1000,
-                $pageOrientation
+                $pageOrientation,
             );
         }
         return new self(
@@ -55,7 +55,7 @@ class PageLayout implements PageLayoutInterface
             $b / 1000,
             $c / 1000,
             $d / 1000,
-            $pageOrientation
+            $pageOrientation,
         );
 
     }
@@ -81,9 +81,8 @@ class PageLayout implements PageLayoutInterface
         private float $rightMargin,
         private float $bottomMargin,
         private float $leftMargin,
-        private PageOrientation $pageOrientation
-    ) {
-    }
+        private PageOrientation $pageOrientation,
+    ) {}
 
     public function getTopMargin(): float
     {
